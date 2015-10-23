@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dynamic.main.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:id="@+id/plugin_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hit"
+        android:textColor="#ffffff" />
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转插件一 Activity" />
+
+    <Button
+        android:id="@+id/start_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始插件服务" />
+
+    <Button
+        android:id="@+id/stop_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停插件服务" />
+    
+    
+     <Button
+        android:id="@+id/bind_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定插件服务" />
+
+    <Button
+        android:id="@+id/unbind_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解绑插件服务" />
+
+    <Button
+        android:id="@+id/load_plugin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转插件二 Activity" />
+
+    <Button
+        android:id="@+id/load_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转主客 Activity" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">宿主</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="hit"> 1、将插件APK拷贝到/sdcard/plugin/目录下\n\n2、运行主程序</string>
+
+</resources>
