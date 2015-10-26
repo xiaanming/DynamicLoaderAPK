@@ -15,10 +15,13 @@ public class MainActivity extends Activity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(android.R.style.Theme_Holo_Light_DarkActionBar);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
 		Log.i(TAG, "Plugin getResources = " + getResources() + "  application = " + getApplication());
+		
+		Log.i(TAG, "Plugin context = " + getBaseContext() + "   activity = " + this);
 		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
@@ -27,6 +30,16 @@ public class MainActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, PluginActionBarActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		
+		findViewById(R.id.start_not_register).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, NotRegisterActivity.class);
 				startActivity(intent);
 			}
 		});

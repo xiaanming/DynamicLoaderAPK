@@ -129,6 +129,24 @@ public class RefInvoke {
 		}
 		return null;
 	}
+	
+	
+	
+	public static Object getFieldObject(Object object, String className, String fieldName) {
+		try {
+			Class<?> cls = Class.forName(className);
+			Field field = cls.getDeclaredField(fieldName);
+			if (!field.isAccessible()) {
+				field.setAccessible(true);
+			}
+			return field.get(object);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 	public static void setFieldObject(Object object, String fieldName,
 			Object vaule) {

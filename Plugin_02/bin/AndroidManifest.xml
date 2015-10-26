@@ -27,6 +27,10 @@
         <activity android:name="com.example.pluginactivity.PluginActionBarActivity"
             android:theme="@style/Theme.AppCompat.Light"/>
         
+        <activity android:name=".NotRegisterActivity">
+            
+        </activity>
+        
     </application>
 
 </manifest>

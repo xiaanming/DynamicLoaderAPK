@@ -1657,10 +1657,12 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f3b002f;
         public static final int action_mode_bar_stub=0x7f3b002e;
         public static final int action_mode_close_button=0x7f3b0021;
-        public static final int action_settings=0x7f3b0041;
+        public static final int action_settings=0x7f3b0046;
         public static final int activity_chooser_view_content=0x7f3b0022;
         public static final int always=0x7f3b0015;
         public static final int beginning=0x7f3b001c;
+        public static final int button=0x7f3b0042;
+        public static final int button_1=0x7f3b0043;
         public static final int checkbox=0x7f3b002a;
         public static final int collapseActionView=0x7f3b0016;
         public static final int decor_content_parent=0x7f3b0030;
@@ -1677,12 +1679,14 @@ containing a value of this type.
         public static final int icon=0x7f3b0027;
         public static final int ifRoom=0x7f3b0017;
         public static final int image=0x7f3b0024;
+        public static final int imageView1=0x7f3b0045;
         public static final int listMode=0x7f3b000b;
         public static final int list_item=0x7f3b0026;
         public static final int middle=0x7f3b001e;
         public static final int never=0x7f3b0018;
         public static final int none=0x7f3b0010;
         public static final int normal=0x7f3b000c;
+        public static final int notification=0x7f3b0044;
         public static final int plugin_1_id_1=0x7f3b0000;
         public static final int progress_circular=0x7f3b0008;
         public static final int progress_horizontal=0x7f3b0009;
@@ -1703,6 +1707,7 @@ containing a value of this type.
         public static final int showTitle=0x7f3b0013;
         public static final int split_action_bar=0x7f3b0005;
         public static final int start_activity=0x7f3b0040;
+        public static final int start_not_register=0x7f3b0041;
         public static final int submit_area=0x7f3b003d;
         public static final int tabMode=0x7f3b000d;
         public static final int title=0x7f3b0028;
@@ -1763,8 +1768,9 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f330017;
         public static final int actionbar_activity=0x7f330018;
         public static final int activity_main=0x7f330019;
+        public static final int activity_not_register=0x7f33001a;
         public static final int plugin_1_layout_1=0x7f330000;
-        public static final int support_simple_spinner_dropdown_item=0x7f33001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f33001b;
     }
     public static final class menu {
         public static final int main=0x7f3f0001;
@@ -1983,6 +1989,7 @@ containing a value of this type.
     
          */
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f390091;
+        public static final int Custom_Theme_AppCompat=0x7f3900ec;
         public static final int Platform_AppCompat=0x7f3900ca;
         public static final int Platform_AppCompat_Dialog=0x7f3900cc;
         public static final int Platform_AppCompat_Light=0x7f3900cb;

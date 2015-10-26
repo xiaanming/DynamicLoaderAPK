@@ -92,8 +92,7 @@
         </activity>
         <activity
             android:name="com.example.pluginactivity.PluginActionBarActivity"
-            android:label="插件二"
-            android:theme="@style/Theme.AppCompat.Light" >
+            android:label="插件二" >
             <meta-data
                 android:name="location"
                 android:value="com.example.pluginactivity" />
@@ -105,9 +104,13 @@
         
          <activity
             android:name="com.dynamic.main.SecondActivity"
-            android:theme="@style/Custom.Theme.AppCompat"
             android:parentActivityName="com.dynamic.main.MainActivity" >
         </activity>
+        
+         
+         <activity android:name="com.dynamic.framework.ActionBarStubActivity">
+         </activity>
+         
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -54,6 +54,8 @@ public class DelegateResources extends Resources {
 						newPath);
 
 				assetPathsHistory.add(newPath);
+				
+				Log.i(TAG, assetPathsHistory.toString());
 			}
 			return;
 		}

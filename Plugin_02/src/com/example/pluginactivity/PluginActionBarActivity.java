@@ -9,6 +9,7 @@ public class PluginActionBarActivity extends ActionBarActivity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(R.style.Theme_AppCompat_Light_DarkActionBar);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.actionbar_activity);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);

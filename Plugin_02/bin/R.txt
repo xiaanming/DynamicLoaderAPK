@@ -354,10 +354,12 @@ int id action_menu_presenter 0x7f3b0007
 int id action_mode_bar 0x7f3b002f
 int id action_mode_bar_stub 0x7f3b002e
 int id action_mode_close_button 0x7f3b0021
-int id action_settings 0x7f3b0041
+int id action_settings 0x7f3b0046
 int id activity_chooser_view_content 0x7f3b0022
 int id always 0x7f3b0015
 int id beginning 0x7f3b001c
+int id button 0x7f3b0042
+int id button_1 0x7f3b0043
 int id checkbox 0x7f3b002a
 int id collapseActionView 0x7f3b0016
 int id decor_content_parent 0x7f3b0030
@@ -374,12 +376,14 @@ int id homeAsUp 0x7f3b000f
 int id icon 0x7f3b0027
 int id ifRoom 0x7f3b0017
 int id image 0x7f3b0024
+int id imageView1 0x7f3b0045
 int id listMode 0x7f3b000b
 int id list_item 0x7f3b0026
 int id middle 0x7f3b001e
 int id never 0x7f3b0018
 int id none 0x7f3b0010
 int id normal 0x7f3b000c
+int id notification 0x7f3b0044
 int id plugin_1_id_1 0x7f3b0000
 int id progress_circular 0x7f3b0008
 int id progress_horizontal 0x7f3b0009
@@ -400,6 +404,7 @@ int id showHome 0x7f3b0012
 int id showTitle 0x7f3b0013
 int id split_action_bar 0x7f3b0005
 int id start_activity 0x7f3b0040
+int id start_not_register 0x7f3b0041
 int id submit_area 0x7f3b003d
 int id tabMode 0x7f3b000d
 int id title 0x7f3b0028
@@ -434,8 +439,9 @@ int layout abc_search_view 0x7f330016
 int layout abc_simple_dropdown_hint 0x7f330017
 int layout actionbar_activity 0x7f330018
 int layout activity_main 0x7f330019
+int layout activity_not_register 0x7f33001a
 int layout plugin_1_layout_1 0x7f330000
-int layout support_simple_spinner_dropdown_item 0x7f33001a
+int layout support_simple_spinner_dropdown_item 0x7f33001b
 int menu main 0x7f3f0001
 int menu plugin_1_menu_1 0x7f3f0000
 int raw plugin_1_raw_1 0x7f360000
@@ -568,6 +574,7 @@ int style Base_Widget_AppCompat_Spinner 0x7f390078
 int style Base_Widget_AppCompat_Spinner_DropDown_ActionBar 0x7f390079
 int style Base_Widget_AppCompat_Toolbar 0x7f390090
 int style Base_Widget_AppCompat_Toolbar_Button_Navigation 0x7f390091
+int style Custom_Theme_AppCompat 0x7f3900ec
 int style Platform_AppCompat 0x7f3900ca
 int style Platform_AppCompat_Dialog 0x7f3900cc
 int style Platform_AppCompat_Light 0x7f3900cb
