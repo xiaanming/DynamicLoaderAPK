@@ -2,19 +2,21 @@ package com.dynamic.main;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
 import android.app.Application;
 import android.app.Instrumentation;
+import android.content.ComponentName;
 import android.content.Context;
-import android.content.res.AssetManager;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.res.Resources;
-import android.text.TextUtils;
+import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import com.dynamic.framework.ContextImplHook;
 import com.dynamic.framework.DelegateResources;
 import com.dynamic.framework.InstrumentationHook;
 import com.dynamic.framework.PluginComponent;
@@ -52,14 +54,48 @@ public class DynamicApplication extends Application {
 		
 		PluginComponent.pluginInfos =  mPluginManager.parsePluginInfo(mPluginManager.getPluginInfoString("plugins.json", this));
 		
+		
+		Intent serviceIntent = new Intent(
+				"android.intent.dynamic.service");
+		serviceIntent.setPackage(getPackageName());
+		startService(serviceIntent);
+		
 	}
+	
+
+	@Override
+	public void startActivity(Intent intent) {
+		ContextImplHook context = new ContextImplHook(getBaseContext(), RuntimeVariable.delegateResources, getClassLoader());
+		context.startActivity(intent);
+	}
+
+
+	@Override
+	public void startActivity(Intent intent, Bundle options) {
+		super.startActivity(intent, options);
+	}
+
+
+	@Override
+	public ComponentName startService(Intent service) {
+		ContextImplHook context = new ContextImplHook(getBaseContext(), RuntimeVariable.delegateResources, getClassLoader());
+		return context.startService(service);
+	}
+
+
+
+	@Override
+	public boolean bindService(Intent service, ServiceConnection conn, int flags) {
+		ContextImplHook context = new ContextImplHook(getBaseContext(), RuntimeVariable.delegateResources, getClassLoader());
+		return context.bindService(service, conn, flags);
+	}
+
 
 	@Override
 	public void onTerminate() {
 		super.onTerminate();
 	}
 
-	
 
 	private void installPlugin(Application application, String pluginPath) {
 		try {

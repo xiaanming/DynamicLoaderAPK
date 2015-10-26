@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
@@ -121,6 +122,18 @@ public class MainActivity extends Activity {
 				unbindService(conn);
 				
 				mIsServiceConnected = false;
+			}
+		});
+		
+		
+		findViewById(R.id.load_other_app).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Uri uri = Uri.parse("http://www.baidu.com");  
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(uri);
+				startActivity(intent);
 			}
 		});
 

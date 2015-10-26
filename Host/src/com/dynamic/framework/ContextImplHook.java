@@ -12,7 +12,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.Toast;
 
 public class ContextImplHook extends ContextWrapper {
 

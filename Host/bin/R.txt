@@ -379,6 +379,7 @@ int id image 0x7f0b0024
 int id listMode 0x7f0b000b
 int id list_item 0x7f0b0026
 int id load_host 0x7f0b0048
+int id load_other_app 0x7f0b0049
 int id load_plugin 0x7f0b0047
 int id main_id_1 0x7f0b0000
 int id middle 0x7f0b001e

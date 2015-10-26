@@ -1682,6 +1682,7 @@ containing a value of this type.
         public static final int listMode=0x7f0b000b;
         public static final int list_item=0x7f0b0026;
         public static final int load_host=0x7f0b0048;
+        public static final int load_other_app=0x7f0b0049;
         public static final int load_plugin=0x7f0b0047;
         public static final int main_id_1=0x7f0b0000;
         public static final int middle=0x7f0b001e;

@@ -57,5 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="跳转主客 Activity" />
+    
+    
+    <Button
+        android:id="@+id/load_other_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转其他APP" />
 
 </LinearLayout>
