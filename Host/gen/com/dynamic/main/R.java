@@ -1689,6 +1689,7 @@ containing a value of this type.
         public static final int never=0x7f0b0018;
         public static final int none=0x7f0b0010;
         public static final int normal=0x7f0b000c;
+        public static final int notification=0x7f0b004a;
         public static final int plugin_info=0x7f0b0041;
         public static final int progress_circular=0x7f0b0008;
         public static final int progress_horizontal=0x7f0b0009;

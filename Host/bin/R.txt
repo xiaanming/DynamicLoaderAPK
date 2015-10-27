@@ -386,6 +386,7 @@ int id middle 0x7f0b001e
 int id never 0x7f0b0018
 int id none 0x7f0b0010
 int id normal 0x7f0b000c
+int id notification 0x7f0b004a
 int id plugin_info 0x7f0b0041
 int id progress_circular 0x7f0b0008
 int id progress_horizontal 0x7f0b0009

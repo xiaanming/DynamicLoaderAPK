@@ -3,9 +3,9 @@ package com.example.pluginactivity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,32 +42,23 @@ public class NotRegisterActivity extends ActionBarActivity {
 			}
 		});
 		
-		final NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);  
-		
 		
 		findViewById(R.id.notification).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(NotRegisterActivity.this);  
-				mBuilder.setContentTitle("测试标题")
-			    .setContentText("测试内容")
-			    .setContentIntent(getDefalutIntent(Notification.FLAG_AUTO_CANCEL)) //设置通知栏点击意图  
-			    .setNumber(5)  
-			    .setTicker("测试通知来啦") 
-			    .setWhen(System.currentTimeMillis())
-			    .setPriority(Notification.PRIORITY_DEFAULT) 
-			    .setSmallIcon(R.drawable.ic_launcher)
-			//  .setAutoCancel(true)//   
-			    .setDefaults(Notification.DEFAULT_VIBRATE);
-			    //Notification.DEFAULT_ALL  Notification.DEFAULT_SOUND 添加声音 // requires VIBRATE permission  
-//			    .setSmallIcon(R.drawable.ic_launcher);//设置通知小
-				
-				
-				Notification notification = mBuilder.build();  
-				notification.flags = Notification.FLAG_AUTO_CANCEL;
-				
-				mNotificationManager.notify(100, notification);
+		        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+		 
+		        CharSequence tickerText = "Hello";
+		        long when = System.currentTimeMillis();
+		 
+		        Notification notification = new Notification(R.drawable.ic_launcher, tickerText, when);
+		         
+		        PendingIntent pi = PendingIntent.getActivity(NotRegisterActivity.this, 0, new Intent(NotRegisterActivity.this,
+		                NotRegisterActivity.class), 0);
+		        notification.setLatestEventInfo(NotRegisterActivity.this, "出勤提醒", "還有15分鐘就到上班時間", pi);
+		 
+		        nm.notify(1, notification);
 				
 				
 			}
