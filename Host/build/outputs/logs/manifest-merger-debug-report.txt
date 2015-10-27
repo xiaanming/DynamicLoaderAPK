@@ -1,0 +1,157 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:2:1-120:12
+	package
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:8:9-35
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+application
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:11:5-114:19
+MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+	android:allowBackup
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:13:9-35
+	android:icon
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:14:9-45
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:12:9-59
+activity#com.dynamic.main.MainActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:15:9-23:20
+	android:label
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:17:13-45
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:16:13-57
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:21:27-74
+activity#com.example.dynamicactivityapk.MainActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:24:9-41:20
+	android:label
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:27:13-32
+	android:icon
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:26:13-49
+	android:theme
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:25:13-71
+intent-filter#android.intent.action.plugin_01+android.intent.category.DEFAULT
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:29:13-33:29
+action#android.intent.action.plugin_01
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:30:17-74
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:30:25-71
+category#android.intent.category.DEFAULT
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:32:17-76
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:32:27-73
+meta-data#location
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:35:13-37:66
+	android:value
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:37:17-63
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:36:17-40
+meta-data#application
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:38:13-40:85
+	android:value
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:40:17-82
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:39:17-43
+activity#com.example.dynamicactivityapk.PluginActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:42:9-60:20
+	android:label
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:45:13-32
+	android:parentActivityName
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:46:13-85
+	android:icon
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:44:13-49
+	android:theme
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:47:13-60
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:43:13-73
+intent-filter#android.intent.action.plugin_02+android.intent.category.DEFAULT
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:48:13-52:29
+action#android.intent.action.plugin_02
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:49:17-74
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:49:25-71
+service#com.example.dynamicactivityapk.PluginService
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:62:9-73:19
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:62:18-77
+intent-filter#android.intent.dynamic.service
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:63:13-65:29
+action#android.intent.dynamic.service
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:64:17-73
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:64:25-70
+activity#com.example.pluginactivity.MainActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:75:9-92:20
+	android:label
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:77:13-32
+	android:parentActivityName
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:78:13-85
+	android:theme
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:79:13-60
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:76:13-67
+intent-filter#android.intent.action.plugin_11111+android.intent.category.DEFAULT
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:80:13-84:29
+action#android.intent.action.plugin_11111
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:81:17-77
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:81:25-74
+activity#com.example.pluginactivity.PluginActionBarActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:93:9-102:20
+	android:label
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:95:13-32
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:94:13-78
+activity#com.dynamic.main.SecondActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:105:10-108:20
+	android:parentActivityName
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:107:13-71
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:106:13-59
+activity#com.dynamic.framework.ActionBarStubActivity
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:111:10-112:21
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:111:20-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:116:5-81
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:116:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:117:5-80
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:117:22-77
+uses-permission#android.permission.INTERNET
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:118:5-66
+	android:name
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:118:22-64

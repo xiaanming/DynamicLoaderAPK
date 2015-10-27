@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
 	<public-padding type="attr" name="main_attr_"     start="0x7f010000" end="0x7f010000" />
     <public-padding type="drawable" name="main_drawable_" start="0x7f020000" end="0x7f020000" />
     <public-padding type="layout" name="main_layout_"   start="0x7f030000" end="0x7f030000" />

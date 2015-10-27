@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333444"
+    android:orientation="vertical" >
+    
+
+</LinearLayout>
+<!-- From: file:/Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/res/layout/actionbar_activity.xml -->

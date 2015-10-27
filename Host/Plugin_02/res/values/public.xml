@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <public-padding name="plugin_1_attr_" end="0x7f310000" start="0x7f310000" type="attr" />
+    <public-padding name="plugin_1_drawable_" end="0x7f320000" start="0x7f320000" type="drawable" />
+    <public-padding name="plugin_1_layout_" end="0x7f330000" start="0x7f330000" type="layout" />
+    <public-padding name="plugin_1_anim_" end="0x7f340000" start="0x7f340000" type="anim" />
+    <public-padding name="plugin_1_xml_" end="0x7f350000" start="0x7f350000" type="xml" />
+    <public-padding name="plugin_1_raw_" end="0x7f360000" start="0x7f360000" type="raw" />
+    <public-padding name="plugin_1_dimen_" end="0x7f370000" start="0x7f370000" type="dimen" />
+    <public-padding name="plugin_1_string_" end="0x7f380000" start="0x7f380000" type="string" />
+    <public-padding name="plugin_1_style_" end="0x7f390000" start="0x7f390000" type="style" />
+    <public-padding name="plugin_1_color_" end="0x7f3a0000" start="0x7f3a0000" type="color" />
+    <public-padding name="plugin_1_id_" end="0x7f3b0000" start="0x7f3b0000" type="id" />
+    <public-padding name="plugin_1_bool_" end="0x7f3c0000" start="0x7f3c0000" type="bool" />
+    <public-padding name="plugin_1_int_" end="0x7f3d0000" start="0x7f3d0000" type="integer" />
+    <public-padding name="plugin_1_array_" end="0x7f3e0000" start="0x7f3e0000" type="array" />
+    <public-padding name="plugin_1_menu_" end="0x7f3f0000" start="0x7f3f0000" type="menu" />
+    -->
+
+</resources>

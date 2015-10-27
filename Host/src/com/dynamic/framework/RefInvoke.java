@@ -81,8 +81,7 @@ public class RefInvoke {
 	}
 
 	/**
-	 * 反射得到类的静态属性（包括私有和保护）
-	 * 
+	 *
 	 * @param class_name
 	 * @param filedName
 	 * @return
@@ -187,8 +186,7 @@ public class RefInvoke {
 	}
 
 	/**
-	 * 设置类的静态属性（包括私有和保护）
-	 * 
+	 *
 	 * @param class_name
 	 * @param filedName
 	 * @param filedVaule

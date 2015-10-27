@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff55ff"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="跳转到插件主页面"/>
+    
+    
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="跳转到另一个插件"/>
+    
+    
+    <Button
+        android:id="@+id/button_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="开启服务"/>
+    
+    
+    <Button
+        android:id="@+id/button_service_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="关闭服务"/>
+
+</LinearLayout><!-- From: file:/Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_01/res/layout/plugin_activity.xml -->

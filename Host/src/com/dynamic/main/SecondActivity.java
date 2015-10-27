@@ -11,14 +11,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class SecondActivity extends ActionBarActivity{
+public class SecondActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Theme_AppCompat_Light_DarkActionBar);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
-		getSupportActionBar().setTitle("主客");
+		getSupportActionBar().setTitle("Host");
 		
 		findViewById(R.id.notification).setOnClickListener(new OnClickListener() {
 			
@@ -39,7 +39,7 @@ public class SecondActivity extends ActionBarActivity{
 		        .setClass(getApplication(), MainActivity.class); 
 		         
 		        PendingIntent pi = PendingIntent.getActivity(SecondActivity.this, 0, intent, 0);
-		        notification.setLatestEventInfo(SecondActivity.this, "主客通知系统", "還有15分鐘就到上班時間", pi);
+		        notification.setLatestEventInfo(SecondActivity.this, "瀹夸富閫氱煡娑堟伅", "Notification", pi);
 		 
 		        nm.notify(100, notification);
 				

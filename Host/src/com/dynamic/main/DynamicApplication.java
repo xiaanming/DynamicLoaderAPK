@@ -119,7 +119,6 @@ public class DynamicApplication extends Application {
 					"mTheme", null);
 
 
-			// 配置动态加载环境
 			Object currentActivityThread = RefInvoke.invokeStaticMethod(
 					"android.app.ActivityThread", "currentActivityThread",
 					new Class[] {}, new Object[] {});

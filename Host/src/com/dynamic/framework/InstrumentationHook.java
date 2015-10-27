@@ -18,11 +18,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.appcompat.R;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.Window;
 
 public class InstrumentationHook extends Instrumentation {
 
@@ -128,7 +125,6 @@ public class InstrumentationHook extends Instrumentation {
 		PluginComponent.launchApplication(componentName);
 		
 		
-		//测试不在宿主注册的Activity
 		if(componentName.equalsIgnoreCase("com.example.pluginactivity.NotRegisterActivity")){
 			intent.setComponent(new ComponentName(packageName, "com.dynamic.framework.ActionBarStubActivity"));
 		}
@@ -149,7 +145,7 @@ public class InstrumentationHook extends Instrumentation {
 				application, intent, info, title, parent, id,
 				lastNonConfigurationInstance);
 
-		// 设置Resource给Activity
+		// inject resources to activity
 		RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,
 				"mResources", context.getResources());
 		return activity;
@@ -186,12 +182,10 @@ public class InstrumentationHook extends Instrumentation {
 		ContextImplHook hook = new ContextImplHook(mBaseContext,
 				context.getResources(), mBaseContext.getClassLoader());
 		
-		//插件中继承ActionBarActivity获取不到资源的问题
 		if(activity instanceof ActionBarActivity && activity.getClass().getName().contains("com.example.pluginactivity")){
-			hook.setTheme(R.style.Theme_AppCompat_Light_DarkActionBar);
+			hook.setTheme(R.style.Theme_AppCompat_Light);
 		}
 		
-//		hook.setTheme(R.style.Theme_AppCompat_Light_DarkActionBar);
 		
 
 		RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,

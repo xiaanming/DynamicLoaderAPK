@@ -9,7 +9,7 @@
     <public-padding name="plugin_raw_" end="0x7f260000" start="0x7f260000" type="raw" />
     <public-padding name="plugin_dimen_" end="0x7f270000" start="0x7f270000" type="dimen" />
     <public-padding name="plugin_string_" end="0x7f280000" start="0x7f280000" type="string" />
-    <public-padding name="plugin_style_" end="0x7f090000" start="0x7f090000" type="style" />
+    <public-padding name="plugin_style_" end="0x7f09000f" start="0x7f090000" type="style" />
     <public-padding name="plugin_color_" end="0x7f2a0000" start="0x7f2a0000" type="color" />
     <public-padding name="plugin_id_" end="0x7f2b0000" start="0x7f2b0000" type="id" />
     <public-padding name="plugin_bool_" end="0x7f2c0000" start="0x7f2c0000" type="bool" />

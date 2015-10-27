@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <!-- 2015双十一导航 -->
+    <color name="double11_actionbar_bg">#ee0a3b</color>
+    <!-- 2015双十一导航end -->
+</resources>
