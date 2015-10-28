@@ -1,13 +1,16 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':appcompat_v7')
 }
 
 buildscript {
     repositories {
         mavenCentral() // or jcenter()
+        maven {
+            url "http://mvnrepo.alibaba-inc.com/mvn/repository"
+        }
     }
 
     dependencies {
@@ -16,7 +19,7 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion "23.0.0"
 
     compileOptions {
@@ -27,9 +30,9 @@ android {
     defaultConfig {
         applicationId "com.dynamic.main"
         minSdkVersion 11
-        targetSdkVersion
+        targetSdkVersion 21
         versionCode 1
-        versionName "1.00x7a"
+        versionName "1.00x7f"
     }
 
 

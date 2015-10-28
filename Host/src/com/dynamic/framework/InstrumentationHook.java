@@ -188,8 +188,8 @@ public class InstrumentationHook extends Instrumentation {
 		
 		
 
-		RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,
-				"mBase", hook);
+//		RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,
+//				"mBase", hook);
 
 		RefInvoke.setFieldObject("android.content.ContextWrapper", activity,
 				"mBase", hook);

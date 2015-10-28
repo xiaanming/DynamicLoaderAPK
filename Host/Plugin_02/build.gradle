@@ -1,19 +1,21 @@
-apply plugin: 'com.android.application'
+apply plugin: 'android'
+
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    provided 'com.android.support:appcompat-v7:22.2.0'
+    compile project(':appcompat_v7')
 }
 
+
 android {
-    compileSdkVersion 22
+    compileSdkVersion 23
     buildToolsVersion "23.0.0"
 
 
     defaultConfig {
         applicationId "com.example.pluginactivity"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 23
         versionCode 1
         versionName "1.00x6b"
     }

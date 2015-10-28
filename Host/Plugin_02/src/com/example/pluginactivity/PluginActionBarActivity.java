@@ -1,11 +1,11 @@
 package com.example.pluginactivity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class PluginActionBarActivity extends AppCompatActivity{
+public class PluginActionBarActivity extends ActionBarActivity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

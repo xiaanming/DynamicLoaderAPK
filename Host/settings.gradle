@@ -1,1 +1,1 @@
-include ':Plugin_01', ':Plugin_02'
+include ':Plugin_01', ':Plugin_02', ':appcompat_v7'

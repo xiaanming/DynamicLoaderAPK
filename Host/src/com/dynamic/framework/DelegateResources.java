@@ -1,6 +1,5 @@
 package com.dynamic.framework;
 
-import java.lang.Throwable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -19,10 +18,11 @@ import android.util.Log;
 
 public class DelegateResources extends Resources {
 	private static final String TAG = DelegateResources.class.getSimpleName();
-	
+
 	private static Set<String> assetPathsHistory;
 	private static boolean ignoreOpt = false;
 	private final static String[] ignoreOptBrands = { "Sony", "SEMC" };
+	private static ArrayList<AssetManager> assetList = new ArrayList<AssetManager>();
 
 	static {
 		for (String brand : ignoreOptBrands) {
@@ -54,7 +54,7 @@ public class DelegateResources extends Resources {
 						newPath);
 
 				assetPathsHistory.add(newPath);
-				
+
 				Log.i(TAG, assetPathsHistory.toString());
 			}
 			return;
@@ -85,7 +85,6 @@ public class DelegateResources extends Resources {
 			}
 		}
 
-
 		Resources delegateResources = null;
 		// fixed bug in xiaomi3
 		if (res != null
@@ -103,14 +102,13 @@ public class DelegateResources extends Resources {
 		} else {
 			delegateResources = new DelegateResources(asset, res);
 		}
-		
+
 		RuntimeVariable.delegateResources = delegateResources;
 
 		assetPathsHistory = assetPaths;
-		
+
 		Log.i(TAG, assetPathsHistory.toString());
 	}
-
 
 	public static List<String> getOriginAssetsPath(AssetManager manager) {
 		List<String> paths = new ArrayList<String>();
@@ -133,7 +131,6 @@ public class DelegateResources extends Resources {
 			return new ArrayList<String>();
 		}
 	}
-
 
 	private static List<String> mOriginAssetsPath = null;
 	private static final String WebViewGoogleAssetPath = "/system/app/WebViewGoogle/WebViewGoogle.apk";
@@ -175,15 +172,24 @@ public class DelegateResources extends Resources {
 
 		return assetPaths;
 	}
-
-	public static class ResInfo {
-		public ResInfo(String type, int resId) {
-			this.resId = resId;
-			this.type = type;
-		}
-
-		public int resId;
-		public String type;
+	
+	
+	@Override
+    public int getIdentifier(String name, String defType, String defPackage) {
+		
+		Log.i(TAG, "name  = " + name + "   defType = " + defType + "     defPackage = " + defPackage);
+		
+		return super.getIdentifier(name, defType, defPackage);
 	}
+
+	
+	public String getResourceName(int resid) throws NotFoundException {
+        String resName = super.getResourceName(resid);
+        
+        Log.i(TAG, "resName  = " + resName + "   resid = " + resid );
+        
+        return resName;
+    }
+
 
 }

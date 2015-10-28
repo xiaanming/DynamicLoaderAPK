@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="23" />
 
     <application
         android:name="com.example.pluginactivity.PluginApplication"
@@ -26,7 +26,9 @@
         <activity
             android:name="com.example.pluginactivity.PluginActionBarActivity"
             android:theme="@style/Theme.AppCompat.Light" />
-        <activity android:name="com.example.pluginactivity.NotRegisterActivity" >
+        <activity
+            android:name="com.example.pluginactivity.NotRegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light" >
         </activity>
     </application>
 

@@ -6,17 +6,17 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 
-public class NotRegisterActivity extends AppCompatActivity {
+public class NotRegisterActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		setTheme(R.style.Custom_Theme_AppCompat);
+		setTheme(R.style.Theme_AppCompat_Light);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_not_register);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -56,7 +56,7 @@ public class NotRegisterActivity extends AppCompatActivity {
 		         
 		        PendingIntent pi = PendingIntent.getActivity(NotRegisterActivity.this, 0, new Intent(NotRegisterActivity.this,
 		                NotRegisterActivity.class), 0);
-		        notification.setLatestEventInfo(NotRegisterActivity.this, "出勤提醒", "還有15分鐘就到上班時間", pi);
+//		        notification.setLatestEventInfo(NotRegisterActivity.this, "出勤提醒", "還有15分鐘就到上班時間", pi);
 		 
 		        nm.notify(1, notification);
 				

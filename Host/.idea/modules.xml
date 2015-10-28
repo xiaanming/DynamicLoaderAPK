@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Host.iml" filepath="$PROJECT_DIR$/Host.iml" />
       <module fileurl="file://$PROJECT_DIR$/Plugin_01/Plugin_01.iml" filepath="$PROJECT_DIR$/Plugin_01/Plugin_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Plugin_02/Plugin_02.iml" filepath="$PROJECT_DIR$/Plugin_02/Plugin_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" filepath="$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" />
     </modules>
   </component>
 </project>

@@ -11,6 +11,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.ArrayMap;
@@ -40,7 +41,11 @@ public class DynamicApplication extends Application {
 		super.onCreate();
 		
 		RuntimeVariable.androidApplication = this;
-		RuntimeVariable.delegateResources = this.getResources();
+		try {
+			RuntimeVariable.delegateResources = initResources(this);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		RuntimeVariable.mClassLoader = getClassLoader();
 
 		File pluginDir = new File(PLUGIN_DIRECTORY);
@@ -99,9 +104,16 @@ public class DynamicApplication extends Application {
 
 	private void installPlugin(Application application, String pluginPath) {
 		try {
-			String directory = application.getCacheDir().getAbsolutePath();
+			File dirFile = new File(application.getCacheDir(), "plugin");
+			if(!dirFile.exists()){
+				dirFile.mkdirs();
+			}
+			String directory = dirFile.getAbsolutePath();
+			
+			
+			//
 			DexClassLoader pluginClassLoader = new DexClassLoader(pluginPath,
-					directory, directory, RuntimeVariable.mClassLoader);
+					directory, null, RuntimeVariable.mClassLoader);
 			
 			RuntimeVariable.mClassLoader = pluginClassLoader;
 
@@ -154,9 +166,23 @@ public class DynamicApplication extends Application {
 			RefInvoke.setFieldObject(mLoaderApk, "mApplication", RuntimeVariable.androidApplication);
 
 		} catch (Exception e) {
-			Log.i(TAG,
-					"load apk classloader error:" + Log.getStackTraceString(e));
+			Log.i(TAG, "load apk classloader error:" + Log.getStackTraceString(e));
 		}
+	}
+	
+	
+	private Resources initResources(Application application) throws Exception {
+		Resources res = null;
+
+		res = application.getResources();
+		if (res != null) {
+			return res;
+		}
+
+		PackageManager pm = application.getPackageManager();
+		res = pm.getResourcesForApplication(application.getApplicationInfo());
+
+		return res;
 	}
 	
 

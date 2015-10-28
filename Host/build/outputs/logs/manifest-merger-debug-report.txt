@@ -17,18 +17,18 @@ ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [Host:appcompat_v7:unspecified] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/Host/appcompat_v7/unspecified/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
+		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
 	android:minSdkVersion
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:8:9-35
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml
 application
 ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:11:5-114:19
-MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [Host:appcompat_v7:unspecified] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/build/intermediates/exploded-aar/Host/appcompat_v7/unspecified/AndroidManifest.xml:22:5-20
 	android:allowBackup
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/AndroidManifest.xml:13:9-35
 	android:icon

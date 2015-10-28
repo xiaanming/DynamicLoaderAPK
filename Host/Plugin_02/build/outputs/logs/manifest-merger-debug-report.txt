@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:3:5-41
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml
@@ -17,8 +17,7 @@ ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [Host:appcompat_v7:unspecified] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/Host/appcompat_v7/unspecified/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:9:9-38
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml
@@ -28,9 +27,8 @@ MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/w
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml
 		INJECTED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml
 application
-ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:11:5-34:19
-MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:22.2.0] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:11:5-35:19
+MERGED from [Host:appcompat_v7:unspecified] /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/build/intermediates/exploded-aar/Host/appcompat_v7/unspecified/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:14:9-41
 	android:allowBackup
@@ -64,6 +62,8 @@ ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/
 	android:name
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:27:19-84
 activity#com.example.pluginactivity.NotRegisterActivity
-ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:30:9-32:20
+ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:30:9-33:20
+	android:theme
+		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:31:13-57
 	android:name
 		ADDED from /Users/xiaanming/Documents/work/android-demo/Github/DynamicLoaderAPK/Host/Plugin_02/AndroidManifest.xml:30:19-54

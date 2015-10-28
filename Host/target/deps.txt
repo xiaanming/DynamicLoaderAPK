@@ -1,2 +1,0 @@
-com.google.android:android:jar:4.4.2:null:provided:4.4.2
-com.taobao.android:appcompat:aar:2.1.3.4:null:compile:2.1.3.4

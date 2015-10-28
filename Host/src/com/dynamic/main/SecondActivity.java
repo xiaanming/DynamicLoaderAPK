@@ -35,8 +35,9 @@ public class SecondActivity extends ActionBarActivity {
 		        Intent intent = new Intent()  
 		        .setAction(Intent.ACTION_MAIN)  
 		        .addCategory(Intent.CATEGORY_LAUNCHER)  
-		        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)  
-		        .setClass(getApplication(), MainActivity.class); 
+		        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)  
+		        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+		        .setClass(getApplication(), SecondActivity.class); 
 		         
 		        PendingIntent pi = PendingIntent.getActivity(SecondActivity.this, 0, intent, 0);
 		        notification.setLatestEventInfo(SecondActivity.this, "宿主通知消息", "Notification", pi);

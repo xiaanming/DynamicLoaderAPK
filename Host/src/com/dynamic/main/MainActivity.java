@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
 			String text = "action = " + action + "\n" + "msg = " + msg;
 
 			Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+			
 		}
 
 	}
@@ -37,6 +38,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		getResources().getIdentifier("activity_main", "layout", "com.dynamic.main");
 
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction("com.dynamic.broadcast");

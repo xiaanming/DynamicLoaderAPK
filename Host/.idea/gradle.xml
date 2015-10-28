@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Plugin_01" />
             <option value="$PROJECT_DIR$/Plugin_02" />
+            <option value="$PROJECT_DIR$/appcompat_v7" />
           </set>
         </option>
       </GradleProjectSettings>
