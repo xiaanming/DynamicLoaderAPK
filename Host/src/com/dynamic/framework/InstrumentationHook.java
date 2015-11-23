@@ -12,18 +12,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.appcompat.R;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 public class InstrumentationHook extends Instrumentation {
 
 	private static final String TAG = "MainActivity";
+	
+	public static final String EXTRA_COMPONENT_NAME = "componentName";
+	
+	private ComponentName mStubComponentName ;
 
 	private Context context;
 	private Instrumentation mBase;
@@ -31,6 +38,7 @@ public class InstrumentationHook extends Instrumentation {
 	public InstrumentationHook(Instrumentation mBase, Context context) {
 		this.context = context;
 		this.mBase = mBase;
+		mStubComponentName = new ComponentName(context.getPackageName(), "com.dynamic.framework.ActionBarStubActivity");
 	}
 
 	public ActivityResult execStartActivity(final Context who,
@@ -110,7 +118,10 @@ public class InstrumentationHook extends Instrumentation {
 	public ActivityResult execStartActivityInternal(Context context, Intent intent, ExecStartActivityCallback callback){
 		String packageName = null;
 		String componentName = null;
-		if (intent.getComponent() != null) {
+		
+		ComponentName mComponentName = null;
+		
+		if ((mComponentName = intent.getComponent()) != null) {
 			packageName = intent.getComponent().getPackageName();
 			componentName = intent.getComponent().getClassName();
 		} else {
@@ -118,16 +129,28 @@ public class InstrumentationHook extends Instrumentation {
 			if (resolveInfo != null && resolveInfo.activityInfo != null) {
 				packageName = resolveInfo.activityInfo.packageName;
 				componentName = resolveInfo.activityInfo.name;
+				
+				mComponentName = new ComponentName(packageName, componentName);
 			}
 		}
 		
+		ActivityInfo activityInfo = null;
+		
+		try {
+			activityInfo = context.getPackageManager().getActivityInfo(mComponentName, PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("activityInfo = " + activityInfo);
+		
+		if(activityInfo == null){
+			intent.setComponent(mStubComponentName);
+			intent.putExtra(EXTRA_COMPONENT_NAME, componentName);
+		}
 		
 		PluginComponent.launchApplication(componentName);
 		
-		
-		if(componentName.equalsIgnoreCase("com.example.pluginactivity.NotRegisterActivity")){
-			intent.setComponent(new ComponentName(packageName, "com.dynamic.framework.ActionBarStubActivity"));
-		}
 		
 		return callback.execStartActivity();
 		
@@ -157,20 +180,21 @@ public class InstrumentationHook extends Instrumentation {
 			ClassNotFoundException {
 		
 		
-		if(className.equalsIgnoreCase("com.dynamic.framework.ActionBarStubActivity")){
-			className = "com.example.pluginactivity.NotRegisterActivity";
+		String stubClassName = intent.getStringExtra(EXTRA_COMPONENT_NAME);
+		if(!TextUtils.isEmpty(stubClassName)){
+			className = stubClassName;
 		}
 		
 		
 		Activity activity = null;
 		try {
 			activity = mBase.newActivity(cl, className, intent);
+			
+			RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,
+					"mResources", context.getResources());
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-
-		RefInvoke.setFieldObject("android.view.ContextThemeWrapper", activity,
-				"mResources", context.getResources());
 		
 		return activity;
 	}

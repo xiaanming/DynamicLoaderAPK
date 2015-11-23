@@ -5,8 +5,10 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,12 +16,16 @@ import android.view.View.OnClickListener;
 
 
 public class NotRegisterActivity extends ActionBarActivity {
+	private static final String TAG = MainActivity.class.getSimpleName();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Custom_Theme_AppCompat);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_not_register);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		Log.i(TAG, "getBaseContext = " + getBaseContext());
 		
 		findViewById(R.id.button).setOnClickListener(new OnClickListener() {
 			
@@ -53,9 +59,18 @@ public class NotRegisterActivity extends ActionBarActivity {
 		        long when = System.currentTimeMillis();
 		 
 		        Notification notification = new Notification(R.drawable.ic_launcher, tickerText, when);
+		        
+		        Intent intent = new Intent()  
+		        .setAction(Intent.ACTION_VIEW)  
+		        .addCategory(Intent.CATEGORY_DEFAULT)  
+		        .addCategory(Intent.CATEGORY_BROWSABLE)
+		        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+		                Intent.FLAG_ACTIVITY_SINGLE_TOP) 
+		        .setPackage(getPackageName())
+		        .setData(Uri.parse("http://tb.cn/ocean/home.htm"));
+		        
 		         
-		        PendingIntent pi = PendingIntent.getActivity(NotRegisterActivity.this, 0, new Intent(NotRegisterActivity.this,
-		                NotRegisterActivity.class), 0);
+		        PendingIntent pi = PendingIntent.getActivity(NotRegisterActivity.this, 0, intent, 0);
 		        notification.setLatestEventInfo(NotRegisterActivity.this, "出勤提醒", "還有15分鐘就到上班時間", pi);
 		 
 		        nm.notify(1, notification);

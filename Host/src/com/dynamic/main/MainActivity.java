@@ -40,6 +40,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		getResources().getIdentifier("activity_main", "layout", "com.dynamic.main");
+		
+		System.out.println("=======" +  Object.class.getClassLoader());
 
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction("com.dynamic.broadcast");

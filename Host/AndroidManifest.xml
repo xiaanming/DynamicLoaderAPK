@@ -111,6 +111,8 @@
          <activity android:name="com.dynamic.framework.ActionBarStubActivity">
          </activity>
          
+         <service android:name="com.dynamic.framework.StubService"></service>
+         
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -86,12 +86,12 @@ public class RefInvoke {
 	 * @param filedName
 	 * @return
 	 */
-	public static Object getStaticFieldObject(String class_name,
+	public static Object getStaticFieldObject(String className,
 			String filedName) {
 
 		try {
-			Class<?> obj_class = Class.forName(class_name);
-			Field field = obj_class.getDeclaredField(filedName);
+			Class<?> ObjectClass = Class.forName(className);
+			Field field = ObjectClass.getDeclaredField(filedName);
 			field.setAccessible(true);
 			return field.get(null);
 		} catch (SecurityException e) {
@@ -115,17 +115,20 @@ public class RefInvoke {
 	}
 
 	public static Object getFieldObject(Object object, String fieldName) {
-		Class<?> cls = object.getClass();
-		try {
-			Field field = cls.getDeclaredField(fieldName);
-			if (!field.isAccessible()) {
-				field.setAccessible(true);
+		Class<?> objectCls = object.getClass();
+		for(Class<?> cls = objectCls; cls != null; cls = cls.getSuperclass()){
+			try {
+				Field field = cls.getDeclaredField(fieldName);
+				if (!field.isAccessible()) {
+					field.setAccessible(true);
+				}
+				return field.get(object);
+	
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-			return field.get(object);
-
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
+		
 		return null;
 	}
 	
@@ -149,19 +152,22 @@ public class RefInvoke {
 
 	public static void setFieldObject(Object object, String fieldName,
 			Object vaule) {
-		try {
-			Class<?> cls = object.getClass();
-			Field field = cls.getDeclaredField(fieldName);
-			field.setAccessible(true);
-			field.set(object, vaule);
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		} catch (NoSuchFieldException e) {
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
+		Class<?> objectCls = object.getClass();
+		for(Class<?> cls = objectCls; cls != null; cls = cls.getSuperclass()){
+			try {
+				Field field = cls.getDeclaredField(fieldName);
+				field.setAccessible(true);
+				field.set(object, vaule);
+				break;
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (NoSuchFieldException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

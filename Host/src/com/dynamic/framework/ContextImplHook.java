@@ -6,6 +6,9 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
@@ -14,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 
 public class ContextImplHook extends ContextWrapper {
+	public static final String EXTRA_ORIGIN_INTENT = "intent";
 
 	private int mThemeResource;
     Resources.Theme mTheme;
@@ -159,6 +163,25 @@ public class ContextImplHook extends ContextWrapper {
 		}
 		
 		PluginComponent.launchApplication(componentName);
+		
+		ComponentName component = new ComponentName(packageName, componentName);
+		
+		ServiceInfo serviceInfo = null;
+		try {
+			serviceInfo = getBaseContext().getPackageManager().getServiceInfo(component, PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(null == serviceInfo){
+			ComponentName componentName2 = new ComponentName(getApplicationContext().getPackageName(), StubService.class.getName());
+			Intent fakeIntent = new Intent(service);
+			fakeIntent.setComponent(componentName2);
+			
+			return super.bindService(fakeIntent, conn, flags);
+		}
+		
 
         return super.bindService(service, conn, flags);
     }
@@ -177,9 +200,65 @@ public class ContextImplHook extends ContextWrapper {
 				componentName = resolveInfo.serviceInfo.name;
 			}
 		}
+		
+		ComponentName component = new ComponentName(packageName, componentName);
+		
+		ServiceInfo serviceInfo = null;
+		try {
+			serviceInfo = getBaseContext().getPackageManager().getServiceInfo(component, PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		if(null == serviceInfo){
+			ComponentName componentName2 = new ComponentName(getApplicationContext().getPackageName(), StubService.class.getName());
+			Intent fakeIntent = new Intent(service);
+			fakeIntent.setComponent(componentName2);
+			
+			ServiceManager.addServiceComponent(componentName);
+			
+			return super.startService(fakeIntent);
+		}
 
 		PluginComponent.launchApplication(componentName);
 		
         return super.startService(service);
     }
+
+
+	@Override
+	public boolean stopService(Intent name) {
+		ComponentName component = name.getComponent();
+		ServiceInfo serviceInfo = null;
+		try {
+			serviceInfo = getBaseContext().getPackageManager().getServiceInfo(component, PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(null == serviceInfo){
+			ComponentName componentName2 = new ComponentName(getApplicationContext().getPackageName(), StubService.class.getName());
+			Intent fakeIntent = new Intent(name);
+			fakeIntent.setComponent(componentName2);
+			
+			return super.stopService(fakeIntent);
+		}
+		
+		
+		return super.stopService(name);
+	}
+
+
+	@Override
+	public void unbindService(ServiceConnection conn) {
+		super.unbindService(conn);
+	}
+    
+    
+    
+    
 }

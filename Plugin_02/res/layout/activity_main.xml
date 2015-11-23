@@ -20,5 +20,47 @@
         android:text="加载没在宿主注册的Activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    
+    
+    <Button
+        android:id="@+id/start_not_register_service"
+        android:text="Start Not Register Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    
+    <Button
+        android:id="@+id/stop_not_register_service"
+        android:text="Stop Not Register Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    
+    <Button
+        android:id="@+id/bind_not_register_service"
+        android:text="Bind Not Register Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    
+    <Button
+        android:id="@+id/unbind_not_register_service"
+        android:text="Unbind Not Register Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    
+     <Button
+        android:id="@+id/start_service"
+        android:text="开启第二个没注册的服务"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     
+     
+     <Button
+        android:id="@+id/stop_service"
+        android:text="停止第二个没注册的服务"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -15,6 +15,9 @@ public class PluginActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.plugin_activity);
 		
+		Intent intent = getIntent();
+		getIntent().getStringExtra("111");
+		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		findViewById(R.id.button).setOnClickListener(new OnClickListener(){
